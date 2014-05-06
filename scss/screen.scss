@@ -2,53 +2,71 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-
 @import "compass/reset";
 @import 'bourbon';
 
 // VARIABLES
-$blue : #0097d0;
-$hover-border : #ccc;
+$blue: #0097D0;
+$hover-border: #CCC;
+$background-color: #EEE;
+$border-size: 3px;
 
 #container {
   width: 1000px;
   margin: auto;
-  background-color: #eeeeee;
+  background-color: $background-color;
 }
 
-#header{
+#header {
   background-color: $blue;
   @include size(100% 100px);
   margin-bottom: 10px;
 }
 
 input[type="text"],
-input[type="email"]{
+input[type="email"] {
+  font-size: 16px;
   height: 50px !important;
 
-  &:hover{
-    border: 1px solid $hover-border;
+  &:hover {
+    border: $border-size solid $hover-border;
     transition: none;
   }
 
-  &:focus{
+  &:focus {
     color: $blue;
     border-color: $blue;
     outline: none;
+    background-color: $background-color;
   }
 }
 
-.select-button{
+.select{
+  &:hover {
+    border: $border-size solid #FFF !important;
+    transition: none !important;
+  }
+
+  &:focus {
+    color: inherit !important;
+    border-color: #FFF !important;
+    outline: none !important;
+    background-color: #FFF !important;
+  }
+}
+
+.select-button {
   background-image: url(http://placehold.it/50);
   background-repeat: no-repeat;
   @include size(50px);
   position: absolute;
   top: 0;
-  right: 0;
+  right: 8px;
   cursor: pointer;
 
-  &:focus, &:hover{
-    background-image: url(http://placehold.it/50/AC678A/FFFFFF);
+
+  &:focus, &:hover, &.active {
+    background-image: url(http://placehold.it/50/0097d0/FFFFFF);
     outline: none;
     border: none;
   }
@@ -57,12 +75,21 @@ input[type="email"]{
     display: none;
     list-style-position: inside;
     list-style-type: none;
-    margin: -15px 0 0;
+    margin: -16px 0 0;
+    position: absolute;
+    width: 100%;
+    padding-right: 16px;
 
     > li {
       padding: 5px;
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid lighten($blue, 5%);
       background-color: $blue;
+      color: white;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken($blue, 10%);
+      }
     }
   }
 }

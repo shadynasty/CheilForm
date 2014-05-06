@@ -2,7 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 5, C:/Program Files (x86)/Prepros/gems/gems/compass-core-1.0.0.alpha.13/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,57 +24,57 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, C:/Program Files (x86)/Prepros/gems/gems/compass-core-1.0.0.alpha.13/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, C:/Program Files (x86)/Prepros/gems/gems/compass-core-1.0.0.alpha.13/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, C:/Program Files (x86)/Prepros/gems/gems/compass-core-1.0.0.alpha.13/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, C:/Program Files (x86)/Prepros/gems/gems/compass-core-1.0.0.alpha.13/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, C:/Program Files (x86)/Prepros/gems/gems/compass-core-1.0.0.alpha.13/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, C:/Program Files (x86)/Prepros/gems/gems/compass-core-1.0.0.alpha.13/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, C:/Program Files (x86)/Prepros/gems/gems/compass-core-1.0.0.alpha.13/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, C:/Program Files (x86)/Prepros/gems/gems/compass-core-1.0.0.alpha.13/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
 
-/* line 13, ../scss/screen.scss */
+/* line 14, ../scss/screen.scss */
 #container {
   width: 1000px;
   margin: auto;
   background-color: #eeeeee;
 }
 
-/* line 19, ../scss/screen.scss */
+/* line 20, ../scss/screen.scss */
 #header {
   background-color: #0097d0;
   width: 100%;
@@ -85,44 +85,73 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* line 26, ../scss/screen.scss */
 input[type="text"],
 input[type="email"] {
+  font-size: 16px;
   height: 50px !important;
 }
-/* line 29, ../scss/screen.scss */
+/* line 31, ../scss/screen.scss */
 input[type="text"]:hover,
 input[type="email"]:hover {
-  border: 1px solid #cccccc;
+  border: 3px solid #cccccc;
   transition: none;
 }
-/* line 34, ../scss/screen.scss */
+/* line 36, ../scss/screen.scss */
 input[type="text"]:focus,
 input[type="email"]:focus {
   color: #0097d0;
   border-color: #0097d0;
   outline: none;
+  background-color: #eeeeee;
 }
 
-/* line 41, ../scss/screen.scss */
-input.select {
+/* line 45, ../scss/screen.scss */
+.select:hover {
+  border: 3px solid white !important;
+  transition: none !important;
+}
+/* line 50, ../scss/screen.scss */
+.select:focus {
+  color: inherit !important;
+  border-color: #FFF !important;
+  outline: none !important;
+  background-color: #FFF !important;
+}
+
+/* line 58, ../scss/screen.scss */
+.select-button {
   background-image: url(http://placehold.it/50);
   background-repeat: no-repeat;
-  background-position: right;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 8px;
+  cursor: pointer;
 }
-/* line 46, ../scss/screen.scss */
-input.select:focus {
-  background-image: url(http://placehold.it/50/AC678A/FFFFFF);
+/* line 68, ../scss/screen.scss */
+.select-button:focus, .select-button:hover, .select-button.active {
+  background-image: url(http://placehold.it/50/0097d0/FFFFFF);
   outline: none;
   border: none;
 }
-/* line 52, ../scss/screen.scss */
-input.select + ul {
+/* line 74, ../scss/screen.scss */
+.select-button + ul {
   display: none;
   list-style-position: inside;
   list-style-type: none;
-  margin: -15px 0 0;
+  margin: -16px 0 0;
+  position: absolute;
+  width: 100%;
+  padding-right: 16px;
 }
-/* line 58, ../scss/screen.scss */
-input.select + ul > li {
+/* line 83, ../scss/screen.scss */
+.select-button + ul > li {
   padding: 5px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #00aaea;
   background-color: #0097d0;
+  color: white;
+  cursor: pointer;
+}
+/* line 90, ../scss/screen.scss */
+.select-button + ul > li:hover {
+  background-color: #00729d;
 }
