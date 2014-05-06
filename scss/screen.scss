@@ -1,0 +1,50 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "bourbon";
+
+// VARIABLES
+$blue : #0097d0;
+$hover-border : #ccc;
+
+#container {
+  width: 1000px;
+  margin: auto;
+  background-color: #eeeeee;
+}
+
+#header{
+  background-color: $blue;
+  @include size(100% 100px);
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"]{
+
+
+  &:hover{
+    border: 1px solid $hover-border;
+    transition: none;
+  }
+
+  &:focus{
+    color: $blue;
+    border-color: $blue;
+    outline: none;
+  }
+}
+
+select{
+  background-image: url(http://placehold.it/37) !important;
+  background-position: right !important;
+
+  &:focus{
+    background-image: url(http://placehold.it/37/AC678A/FFFFFF) !important;
+    outline: none;
+  }
+}
+
