@@ -4,7 +4,7 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
-@import "bourbon";
+@import 'bourbon';
 
 // VARIABLES
 $blue : #0097d0;
@@ -38,12 +38,16 @@ input[type="email"]{
   }
 }
 
-input.select{
+.select-button{
   background-image: url(http://placehold.it/50);
   background-repeat: no-repeat;
-  background-position: right;
+  @include size(50px);
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
 
-  &:focus{
+  &:focus, &:hover{
     background-image: url(http://placehold.it/50/AC678A/FFFFFF);
     outline: none;
     border: none;
