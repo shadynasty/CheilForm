@@ -24,7 +24,7 @@ $hover-border : #ccc;
 
 input[type="text"],
 input[type="email"]{
-
+  height: 50px !important;
 
   &:hover{
     border: 1px solid $hover-border;
@@ -38,13 +38,28 @@ input[type="email"]{
   }
 }
 
-select{
-  background-image: url(http://placehold.it/37) !important;
-  background-position: right !important;
+input.select{
+  background-image: url(http://placehold.it/50);
+  background-repeat: no-repeat;
+  background-position: right;
 
   &:focus{
-    background-image: url(http://placehold.it/37/AC678A/FFFFFF) !important;
+    background-image: url(http://placehold.it/50/AC678A/FFFFFF);
     outline: none;
+    border: none;
+  }
+
+  & + ul {
+    display: none;
+    list-style-position: inside;
+    list-style-type: none;
+    margin: -15px 0 0;
+
+    > li {
+      padding: 5px;
+      border-bottom: 1px solid #eee;
+      background-color: $blue;
+    }
   }
 }
 

@@ -82,6 +82,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   margin-bottom: 10px;
 }
 
+/* line 26, ../scss/screen.scss */
+input[type="text"],
+input[type="email"] {
+  height: 50px !important;
+}
 /* line 29, ../scss/screen.scss */
 input[type="text"]:hover,
 input[type="email"]:hover {
@@ -97,12 +102,27 @@ input[type="email"]:focus {
 }
 
 /* line 41, ../scss/screen.scss */
-select {
-  background-image: url(http://placehold.it/37) !important;
-  background-position: right !important;
+input.select {
+  background-image: url(http://placehold.it/50);
+  background-repeat: no-repeat;
+  background-position: right;
 }
-/* line 45, ../scss/screen.scss */
-select:focus {
-  background-image: url(http://placehold.it/37/AC678A/FFFFFF) !important;
+/* line 46, ../scss/screen.scss */
+input.select:focus {
+  background-image: url(http://placehold.it/50/AC678A/FFFFFF);
   outline: none;
+  border: none;
+}
+/* line 52, ../scss/screen.scss */
+input.select + ul {
+  display: none;
+  list-style-position: inside;
+  list-style-type: none;
+  margin: -15px 0 0;
+}
+/* line 58, ../scss/screen.scss */
+input.select + ul > li {
+  padding: 5px;
+  border-bottom: 1px solid #eee;
+  background-color: #0097d0;
 }
