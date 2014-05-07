@@ -2,6 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import "compass";
 @import "compass/reset";
 @import 'bourbon';
 
@@ -15,12 +16,13 @@ $border-size: 3px;
   width: 1000px;
   margin: auto;
   background-color: $background-color;
+  min-height: 800px;
 }
 
 #header {
   background-color: $blue;
   @include size(100% 100px);
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 
 input[type="text"],
@@ -41,7 +43,7 @@ input[type="email"] {
   }
 }
 
-.select{
+.select {
   &:hover {
     border: $border-size solid #FFF !important;
     transition: none !important;
@@ -61,9 +63,10 @@ input[type="email"] {
   @include size(50px);
   position: absolute;
   top: 0;
-  right: 8px;
+  right: 0;
+  margin-right: 15px;
   cursor: pointer;
-
+  @include transition(200ms all ease-out);
 
   &:focus, &:hover, &.active {
     background-image: url(http://placehold.it/50/0097d0/FFFFFF);
@@ -78,7 +81,8 @@ input[type="email"] {
     margin: -16px 0 0;
     position: absolute;
     width: 100%;
-    padding-right: 16px;
+    padding-right: 30px;
+    z-index: 200;
 
     > li {
       padding: 5px;
@@ -92,5 +96,40 @@ input[type="email"] {
       }
     }
   }
+}
+
+button[type="submit"] {
+  margin: 15px;
+}
+
+input[type=checkbox].css-checkbox {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+
+  & + label.css-label {
+    padding-left: 20px;
+    height: 15px;
+    display: inline-block;
+    line-height: 15px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    font-size: 15px;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+
+  &:checked + label.css-label {
+    background-position: 0 -15px;
+  }
+}
+
+.css-label {
+  background-image: url(http://csscheckbox.com/checkboxes/dark-check-green.png);
 }
 

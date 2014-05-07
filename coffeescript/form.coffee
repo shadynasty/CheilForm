@@ -15,4 +15,10 @@ openSelect = (item) ->
 itemSelected = (item) ->
   sv = item.text()
   item.parent().prev(".select").css("border", "3px solid red")
-  console.log item.parent().hide().prev().removeClass("active").prev().val(sv);
+  item.parent().hide().prev().removeClass("active").prev().val(sv);
+
+
+formSubmit = ->
+  console.log "LOG"
+  console.log $('#demo_box_1').prop("checked")
+  false
