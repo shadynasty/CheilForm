@@ -7,13 +7,18 @@
 @import 'bourbon';
 
 // VARIABLES
-$blue: #0097D0;
-$hover-border: #CCC;
-$background-color: #EEE;
+$blue: #0095CE;
+$hover-border: #BEBEBE;
+$background-color: #E4E4E4;
 $border-size: 3px;
+$header-height: 120px;
+
+#container * {
+  font-size: 16px;
+}
 
 #container {
-  width: 1000px;
+  width: 960px;
   margin: auto;
   background-color: $background-color;
   min-height: 800px;
@@ -21,14 +26,22 @@ $border-size: 3px;
 
 #header {
   background-color: $blue;
-  @include size(100% 100px);
+  @include size(100% $header-height);
+  line-height: $header-height;
   margin-bottom: 25px;
+
+  .banner {
+    margin-left: 84px;
+  }
+
+  .logo {
+    margin: 0 0 10px 145px;
+  }
 }
 
 input[type="text"],
 input[type="email"] {
-  font-size: 16px;
-  height: 50px !important;
+  height: 60px !important;
 
   &:hover {
     border: $border-size solid $hover-border;
@@ -58,18 +71,18 @@ input[type="email"] {
 }
 
 .select-button {
-  background-image: url(http://placehold.it/50);
+  background-image: url(../img/select-button.png);
   background-repeat: no-repeat;
-  @include size(50px);
+  @include size(60px);
   position: absolute;
   top: 0;
   right: 0;
-  margin-right: 15px;
+  margin-right: 8px;
   cursor: pointer;
   @include transition(200ms all ease-out);
 
   &:focus, &:hover, &.active {
-    background-image: url(http://placehold.it/50/0097d0/FFFFFF);
+    background-image: url(../img/select-button-active.png);
     outline: none;
     border: none;
   }
@@ -81,7 +94,7 @@ input[type="email"] {
     margin: -16px 0 0;
     position: absolute;
     width: 100%;
-    padding-right: 30px;
+    padding-right: 16px;
     z-index: 200;
 
     > li {
@@ -100,6 +113,11 @@ input[type="email"] {
 
 button[type="submit"] {
   margin: 15px;
+  background-color: $blue;
+
+  &:hover {
+    background-color: darken($blue, 10%);
+  }
 }
 
 input[type=checkbox].css-checkbox {
@@ -113,23 +131,22 @@ input[type=checkbox].css-checkbox {
   border: 0;
 
   & + label.css-label {
-    padding-left: 20px;
-    height: 15px;
+    padding-left: 25px;
+    height: 22px;
     display: inline-block;
-    line-height: 15px;
+    line-height: 22px;
     background-repeat: no-repeat;
     background-position: 0 0;
-    font-size: 15px;
     vertical-align: middle;
     cursor: pointer;
   }
 
   &:checked + label.css-label {
-    background-position: 0 -15px;
+    background-position: 0 -22px;
   }
 }
 
 .css-label {
-  background-image: url(http://csscheckbox.com/checkboxes/dark-check-green.png);
+  background-image: url(../img/customcheck.png);
 }
 

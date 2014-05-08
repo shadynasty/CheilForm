@@ -19,6 +19,5 @@ itemSelected = (item) ->
 
 
 formSubmit = ->
-  console.log "LOG"
   console.log $('#demo_box_1').prop("checked")
   false

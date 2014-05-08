@@ -12,7 +12,11 @@
 </head>
 <body>
 <div id="container">
-    <div id="header"></div>
+    <div id="header">
+        <img src="img/header-rf.png" alt="" class="banner"/ >
+        <img class="logo" src="img/header-logo.png" alt=""/>
+        
+    </div>
     <form>
     <div class="row">
         <div class="large-6 column">
@@ -47,7 +51,7 @@
             </div>
         </div>
         <div class="large-6 column">
-            <img src="http://placehold.it/300x400" alt=""/>
+            <img class="rail" src="img/sideimg.png" alt=""/>
         </div>
         <div class="row">
             <div class="large-12 column">
@@ -56,14 +60,15 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="large-12 column">
-                <button type="submit">SUBMIT</button>
 
-            </div>
-        </div>
     </div>
     </form>
+    <div class="row">
+        <div class="large-12 column">
+            <button type="submit" onclick="formSubmit()">Submit</button>
+
+        </div>
+    </div>
 </div>
 
 <script src="js/vendor/jquery.js"></script>
